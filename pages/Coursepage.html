@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coursepage</title>
+    <link href="/src/output.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.0/css/all.min.css">
+</head>
+<style>
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 3px;
+    left: 0;
+    bottom: -2px;
+    background-color: #7579FF;
+    border-radius: 4px;
+    transition: width 0.2s ease-in-out;
+  }
+
+  .nav-link:hover::after,
+  .nav-link.active::after {
+    width: 100%;
+  }
+
+  /* Sembunyikan scrollbar */
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    /* IE dan Edge */
+    scrollbar-width: none;
+    /* Firefox */
+  }
+
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari, Opera */
+  }
+</style>
+</head>
+
+<body class="bg-white">
+ 
+      <div id="navbar"></div>
+
+
+<section class="bg-white dark:bg-gray-900 ">
+  <div class="pt-10 pb-5 px-4 sm:px-10 mx-auto max-w-screen-xl text-center">
+    
+    <!-- Tagline kecil -->
+    <h1
+      class="mb-4 border text-lg font-bold px-6 inline-block rounded-full text-gray-900 sm:text-xl md:text-xl lg:text-xl 2xl:text-2xl dark:text-white">
+      Find The Right Course For You
+    </h1>
+
+    <!-- Headline besar -->
+    <h1
+      class="mb-4 text-4xl font-extrabold tracking-tight leading-tight text-gray-900 sm:text-5xl md:text-5xl lg:text-5xl 2xl:text-6xl sm:px-10 lg:px-20 dark:text-white">
+      Empowering Web Designers With Real-World Education
+    </h1>
+
+    <!-- Deskripsi -->
+    <p class="text-lg font-normal text-black sm:text-xl md:text-xl sm:px-10 lg:px-48 dark:text-gray-400">
+      Turn your creativity into a profitable skillset with practical lessons
+      and portfolio-ready work.
+    </p>
+
+  </div>
+</section>
+
+
+
+
+  <div class="flex justify-center">
+    <div class="flex flex-col md:flex-row w-full max-w-6xl rounded-3xl overflow-hidden m-6 shadow-lg">
+
+      <!-- Gambar -->
+      <img class="object-cover w-full md:w-1/2 max-h-60 md:max-h-full" src="/simpen/image 126.png" alt="Course image" />
+
+      <!-- Konten -->
+      <div class="flex flex-col justify-between p-10 md:w-1/2 bg-[#1C1B3A] text-white">
+
+        <!-- Top Section -->
+        <div>
+          <h2 class="text-3xl font-semibold mb-3">Webflow Masterclass</h2>
+          <p class="text-base text-gray-300 mb-8 leading-relaxed">
+            Start building pro Webflow websites quickly<br />
+            and effectively
+          </p>
+
+          <p class="text-lg text-gray-300 mb-3 font-medium">You’ll Learn</p>
+          <div class="grid grid-cols-2 gap-3 mb-10">
+            <span
+              class="px-3 py-1.5 text-xs sm:text-sm bg-[#717BFF] text-white rounded-md text-center block">Fundamentals</span>
+            <span
+              class="px-3 py-1.5 text-xs sm:text-sm bg-[#717BFF] text-white rounded-md text-center block">Responsiveness</span>
+            <span
+              class="px-3 py-1.5 text-xs sm:text-sm bg-[#717BFF] text-white rounded-md text-center block">Relume</span>
+            <span class="px-3 py-1.5 text-xs sm:text-sm bg-[#717BFF] text-white rounded-md text-center block">Client
+              Management</span>
+          </div>
+        </div>
+
+        <!-- Bottom Section -->
+        <div class="flex items-center justify-between">
+          <span class="text-3xl font-semibold tracking-wide">$600</span>
+          <button onclick="location.href='Detailpage.html'"  class="px-5 py-4 cursor-pointer bg-[#717BFF] hover:bg-[#5f69e8] text-white rounded-xl text-md font-medium">
+            Learn More
+          </button>
+       
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="flex justify-center">
+    <div class="flex flex-col md:flex-row w-full max-w-6xl rounded-3xl overflow-hidden m-6 shadow-lg">
+
+      <!-- Gambar -->
+      <img class="object-cover w-full md:w-1/2 max-h-60 md:max-h-full" src="/simpen/image 126.png" alt="Course image" />
+
+      <!-- Konten -->
+      <div class="flex flex-col justify-between p-10 md:w-1/2 bg-[#1C1B3A] text-white">
+
+        <!-- Top Section -->
+        <div>
+          <h2 class="text-3xl font-semibold mb-3">Webflow Masterclass</h2>
+          <p class="text-base text-gray-300 mb-8 leading-relaxed">
+            Start building pro Webflow websites quickly<br />
+            and effectively
+          </p>
+
+          <p class="text-lg text-gray-300 mb-3 font-medium">You’ll Learn</p>
+          <div class="grid grid-cols-2 gap-3 mb-10">
+            <span
+              class="px-3 py-1.5 text-xs sm:text-sm bg-[#717BFF] text-white rounded-md text-center block">Fundamentals</span>
+            <span
+              class="px-3 py-1.5 text-xs sm:text-sm bg-[#717BFF] text-white rounded-md text-center block">Responsiveness</span>
+            <span
+              class="px-3 py-1.5 text-xs sm:text-sm bg-[#717BFF] text-white rounded-md text-center block">Relume</span>
+            <span class="px-3 py-1.5 text-xs sm:text-sm bg-[#717BFF] text-white rounded-md text-center block">Client
+              Management</span>
+          </div>
+        </div>
+
+        <!-- Bottom Section -->
+        <div class="flex items-center justify-between">
+          <span class="text-3xl font-semibold tracking-wide">$600</span>
+          <button class="px-5 py-4 bg-[#717BFF] hover:bg-[#5f69e8] text-white rounded-xl text-md font-medium">
+            Learn More
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="flex justify-center">
+    <div class="flex flex-col md:flex-row w-full max-w-6xl rounded-3xl overflow-hidden m-6 shadow-lg">
+
+      <!-- Gambar -->
+      <img class="object-cover w-full md:w-1/2 max-h-60 md:max-h-full" src="/simpen/image 126.png" alt="Course image" />
+
+      <!-- Konten -->
+      <div class="flex flex-col justify-between p-10 md:w-1/2 bg-[#1C1B3A] text-white">
+
+        <!-- Top Section -->
+        <div>
+          <h2 class="text-3xl font-semibold mb-3">Webflow Masterclass</h2>
+          <p class="text-base text-gray-300 mb-8 leading-relaxed">
+            Start building pro Webflow websites quickly<br />
+            and effectively
+          </p>
+
+          <p class="text-lg text-gray-300 mb-3 font-medium">You’ll Learn</p>
+          <div class="grid grid-cols-2 gap-3 mb-10">
+            <span
+              class="px-3 py-1.5 text-xs sm:text-sm bg-[#717BFF] text-white rounded-md text-center block">Fundamentals</span>
+            <span
+              class="px-3 py-1.5 text-xs sm:text-sm bg-[#717BFF] text-white rounded-md text-center block">Responsiveness</span>
+            <span
+              class="px-3 py-1.5 text-xs sm:text-sm bg-[#717BFF] text-white rounded-md text-center block">Relume</span>
+            <span class="px-3 py-1.5 text-xs sm:text-sm bg-[#717BFF] text-white rounded-md text-center block">Client
+              Management</span>
+          </div>
+        </div>
+
+        <!-- Bottom Section -->
+        <div class="flex items-center justify-between">
+          <span class="text-3xl font-semibold tracking-wide">$600</span>
+          <button class="px-5 py-4 bg-[#717BFF] hover:bg-[#5f69e8] text-white rounded-xl text-md font-medium">
+            Learn More
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <section class="bg-white py-16 px-6 text-center">
+    <h2 class="text-4xl font-extrabold text-purple-400 mb-12">Testimonial</h2>
+
+    <div id="testimonial-wrapper" class="mx-auto max-w-[80rem] overflow-x-auto hide-scrollbar scroll-smooth ">
+      <div id="card-container" class="flex gap-10 w-max px-4">
+
+        <!-- Card 1 -->
+        <div class="flex-shrink-0 w-[30rem] h-96 bg-gray-50 rounded-3xl shadow p-8 flex items-center gap-8">
+          <img src="/simpen/image.png" class="w-48 h-64 object-cover rounded-2xl" />
+          <div class="text-left">
+            <h3 class="text-2xl font-semibold text-purple-300">Card 1</h3>
+            <p class="mt-4 text-gray-600">Kalimat testimoni pertama yang sangat menginspirasi dan menggugah hati.</p>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="flex-shrink-0 w-[30rem] h-96 bg-gray-50 rounded-3xl shadow p-8 flex items-center gap-8">
+          <img src="/simpen/image.png" class="w-48 h-64 object-cover rounded-2xl" />
+          <div class="text-left">
+            <h3 class="text-2xl font-semibold text-purple-300">Card 2</h3>
+            <p class="mt-4 text-gray-600">Testimoni kedua memberikan kesan positif dan kepercayaan tinggi terhadap
+              layanan kami.</p>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="flex-shrink-0 w-[30rem] h-96 bg-gray-50 rounded-3xl shadow p-8 flex items-center gap-8">
+          <img src="/simpen/image.png" class="w-48 h-64 object-cover rounded-2xl" />
+          <div class="text-left">
+            <h3 class="text-2xl font-semibold text-purple-300">Card 3</h3>
+            <p class="mt-4 text-gray-600">Pengalaman luar biasa yang membuat pelanggan kami sangat puas dan loyal.</p>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="flex-shrink-0 w-[30rem] h-96 bg-gray-50 rounded-3xl shadow p-8 flex items-center gap-8">
+          <img src="/simpen/image.png" class="w-48 h-64 object-cover rounded-2xl" />
+          <div class="text-left">
+            <h3 class="text-2xl font-semibold text-purple-300">Card 4</h3>
+            <p class="mt-4 text-gray-600">Testimoni keempat ini menegaskan kualitas dan profesionalitas kami.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Wave Background Section -->
+  <div class="relative w-full h-[500px] md:h-[600px] bg-bottom bg-no-repeat bg-cover pb-32"
+    style="background-image: url('/simpen/Obout Me.png');">
+    <div
+      class="absolute inset-0 flex flex-col items-center justify-center text-white px-4 text-center transform -translate-y-10 md:-translate-y-20">
+
+      <img src="/simpen/CodeJago 2.png" alt="Logo CodeJago" class="w-24 h-24 md:w-40 md:h-40 -mt-4" />
+
+      <h2 class="text-2xl md:text-4xl font-bold mb-10">Still Have Question?</h2>
+
+      <button
+        class="bg-white text-black text-sm md:text-base px-6 py-2 rounded-full font-semibold shadow-md hover:bg-gray-100 transition duration-300 mb-10">
+        Contact Us
+      </button>
+
+      <div class="flex space-x-6 mt-2 mx-auto md:mx-auto">
+        <a href="https://instagram.com" target="_blank">
+          <img src="/simpen/instagram.svg" alt="Instagram"
+            class="w-6 h-6 md:w-8 md:h-8 hover:scale-110 transition-transform duration-200" />
+        </a>
+        <a href="https://facebook.com" target="_blank">
+          <img src="/simpen/facebook.svg" alt="Facebook"
+            class="w-6 h-6 md:w-8 md:h-8 hover:scale-110 transition-transform duration-200" />
+        </a>
+        <a href="https://linkedin.com" target="_blank">
+          <img src="/simpen/linkedin.svg" alt="LinkedIn"
+            class="w-6 h-6 md:w-8 md:h-8 hover:scale-110 transition-transform duration-200" />
+        </a>
+        <a href="https://twitter.com" target="_blank">
+          <img src="/simpen/twitter.svg" alt="Twitter"
+            class="w-6 h-6 md:w-8 md:h-8 hover:scale-110 transition-transform duration-200" />
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="w-full bg-white flex px-5 lg:px-20 py-4 items-end justify-between">
+      <img src="/simpen/CodeJago 2.png" class="w-30 lg:w-24 h-auto" alt="">
+      <h1 class="text-md lg:text-2xl mb-4">CodeJago © 2025</h1>
+    </div>
+  </footer>
+
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+<script>
+  const toggle = document.getElementById('menu-toggle');
+  const menu = document.getElementById('mobile-menu');
+
+  toggle.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
+  });
+</script>
+<script>
+  window.addEventListener('load', () => {
+    const wrapper = document.getElementById('testimonial-wrapper');
+    const cards = wrapper.querySelectorAll('.flex-shrink-0');
+    if (cards.length >= 2) {
+      const card = cards[1]; // card ke-2
+      const cardWidth = card.offsetWidth;
+      const wrapperWidth = wrapper.clientWidth;
+      const cardOffset = card.offsetLeft;
+
+      const scrollTo = cardOffset - (wrapperWidth / 2) + (cardWidth / 2) - 80; // koreksi posisi
+      wrapper.scrollLeft = scrollTo;
+    }
+  });
+</script>
+<script src="/src/navbar.js"></script>
+
+</html>

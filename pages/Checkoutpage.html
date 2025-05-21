@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Gateway</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
+</head>
+
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+
+    <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-lg">
+        <h2 class="text-2xl font-bold text-indigo-900 mb-4">Complete Your Payment</h2>
+
+        <!-- Order Summary -->
+        <div class="mb-6">
+            <h3 class="text-lg font-semibold text-gray-700">Order Summary</h3>
+            <div class="flex justify-between mt-2">
+                <span>Product Name</span>
+                <span class="font-semibold">$99.99</span>
+            </div>
+            <div class="flex justify-between mt-2">
+                <span>Tax (10%)</span>
+                <span class="font-semibold">$9.99</span>
+            </div>
+            <div class="flex justify-between border-t pt-2 mt-2 font-semibold text-indigo-900">
+                <span>Total</span>
+                <span>$109.98</span>
+            </div>
+        </div>
+
+        <!-- Payment Method Selection -->
+        <div class="mb-6">
+            <h3 class="text-lg font-semibold text-gray-700">Payment Method</h3>
+            <select id="paymentMethod" class="w-full px-4 py-2 border rounded-lg mt-2">
+                <option value="credit-card">Credit Card</option>
+                <option value="paypal">PayPal</option>
+                <option value="ewallet">E-Wallet</option>
+            </select>
+        </div>
+
+        <!-- Credit Card Form -->
+        <div id="cardDetails" class="space-y-4">
+            <input type="text" id="cardNumber" placeholder="Card Number" class="w-full px-4 py-2 border rounded-lg">
+            <div class="flex gap-4">
+                <input type="text" id="expiryDate" placeholder="MM/YY" class="w-1/2 px-4 py-2 border rounded-lg">
+                <input type="text" id="cvv" placeholder="CVV" class="w-1/2 px-4 py-2 border rounded-lg">
+            </div>
+        </div>
+
+        <!-- Payment Button -->
+        <button id="payButton"
+            class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-3 px-4 rounded-lg transition duration-200 mt-6">
+            Pay Now
+        </button>
+
+        <!-- Payment Status -->
+        <div id="paymentStatus" class="hidden mt-4 text-center text-lg font-semibold"></div>
+        <!-- Payment Success Popup -->
+        <div id="paymentPopup" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-80 hidden">
+            <div class="bg-white rounded-lg shadow-lg p-8 text-center w-80">
+                <div class="relative flex justify-center">
+                    <i id="checkIcon" class="fa-solid fa-circle-check fa-shake text-green-500 text-6xl"></i>
+                </div>
+                <h2 class="text-2xl font-bold text-green-600 mt-4">Payment Successful!</h2>
+                <p class="text-gray-600 mt-2">Your transaction has been completed.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const payButton = document.getElementById("payButton");
+            const paymentPopup = document.getElementById("paymentPopup");
+            const checkIcon = document.getElementById("checkIcon");
+
+            payButton.addEventListener("click", function () {
+                payButton.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Processing...';
+                payButton.disabled = true;
+
+                setTimeout(() => {
+                    paymentPopup.classList.remove("hidden"); // Tampilkan popup
+
+                    setTimeout(() => {
+                        paymentPopup.classList.add("hidden"); // Sembunyikan popup setelah 3 detik
+                        window.location.href = "Coursepage.html"; 
+                    }, 3000);
+
+                    payButton.innerHTML = "Pay Now";
+                    payButton.disabled = false;
+                }, 2000); // Simulasi proses pembayaran 2 detik
+            });
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register Page</title>
+  <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-white min-h-screen flex flex-col justify-between overflow-hidden">
+
+  <!-- Main Content -->
+  <div class="flex-grow flex items-center justify-center p-4">
+    <div class="container mx-auto max-w-5xl flex flex-col lg:flex-row items-center justify-between gap-8">
+
+      <!-- Register Card -->
+      <div class="bg-white rounded-[2rem] shadow-xl p-6 w-full max-w-sm relative overflow-hidden">
+        <!-- Logo untuk Mobile -->
+        <img src="/simpen/CodeJago 2.png" alt="Logo CodeJago"
+          class="block lg:hidden absolute top-4 right-4 w-16 h-16 object-contain" />
+
+        <!-- Title -->
+        <h1 class="text-3xl font-bold text-[#B224EF] mb-6">Register</h1>
+
+        <!-- Form -->
+        <form action="/pages/Loginpage.html" method="GET" class="space-y-4">
+          <div>
+            <label class="block text-[#D732A8] font-medium mb-1">Name</label>
+            <input type="text"
+              class="w-full px-4 py-2.5 bg-gray-200 rounded-full focus:outline-none focus:ring-2 focus:ring-purple-400" />
+          </div>
+
+          <div>
+            <label class="block text-[#D732A8] font-medium mb-1">Email</label>
+            <input type="email"
+              class="w-full px-4 py-2.5 bg-gray-200 rounded-full focus:outline-none focus:ring-2 focus:ring-purple-400" />
+          </div>
+
+          <div>
+            <label class="block text-[#D732A8] font-medium mb-1">Phone</label>
+            <input type="tel"
+              class="w-full px-4 py-2.5 bg-gray-200 rounded-full focus:outline-none focus:ring-2 focus:ring-purple-400" />
+          </div>
+
+          <div>
+            <label class="block text-[#D732A8] font-medium mb-1">Password</label>
+            <input type="password"
+              class="w-full px-4 py-2.5 bg-gray-200 rounded-full focus:outline-none focus:ring-2 focus:ring-purple-400" />
+          </div>
+          <div class="flex items-start">
+            <div class="flex items-center h-5">
+              <input id="terms" aria-describedby="terms" type="checkbox"
+                class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-primary-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-primary-600 dark:ring-offset-gray-800"
+                required="">
+            </div>
+            <div class="ml-3 text-sm">
+              <label for="terms" class="font-light text-gray-500 dark:text-gray-300">I accept the <a
+                  class="font-medium hover:underline  text-[#B224EF] hover:text-[#D732A8]" href="#">Terms and
+                  Conditions</a></label>
+            </div>
+          </div>
+
+          <button type="submit"
+            class="w-full bg-[#7579FF] hover:bg-[#D732A8] text-white font-semibold py-2.5 rounded-xl transition duration-200">
+            Register
+          </button>
+          <p class="text-sm font-light text-gray-500 dark:text-gray-400">
+            Already have an account? <a href="Loginpage.html"
+              class="font-medium  hover:underline text-[#B224EF] hover:text-[#D732A8]">Login here</a>
+          </p>
+        </form>
+      </div>
+
+      <!-- Logo Besar untuk Desktop -->
+      <div class="hidden lg:flex items-center justify-center w-full max-w-sm">
+        <img src="/simpen/CodeJago 2.png" alt="Logo CodeJago" class="w-96 h-96 object-contain" />
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-[#e9eaff]">
+    <div class="w-full flex items-end justify-between px-6 lg:px-20 py-4">
+      <img src="/simpen/CodeJago 2.png" class="w-12 lg:w-20 h-auto" alt="Logo Footer" />
+      <h1 class="text-sm lg:text-xl mb-2">CodeJago © 2025</h1>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+</body>
+
+</html>

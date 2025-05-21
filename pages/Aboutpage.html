@@ -1,0 +1,249 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/src/output.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.0/css/all.min.css">
+    <style>
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0%;
+            height: 3px;
+            left: 0;
+            bottom: -2px;
+            background-color: #7579FF;
+            border-radius: 4px;
+            transition: width 0.2s ease-in-out;
+        }
+
+        .nav-link:hover::after,
+        .nav-link.active::after {
+            width: 100%;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- Navbar theme kebalik dark/white -->
+    <div id="navbar"></div>
+
+
+    <!-- Jumbotron -->
+    <section class="bg-white dark:bg-gray-900 lg:mt-15">
+        <div class="pt-10 pb-5 px-4 mx-auto max-w-screen-xl text-center">
+            <h1
+                class="mb-4 border text-xs font-bold px-3 inline-block rounded-full text-gray-900 md:text-md lg:text-xl xl:text-2xl dark:text-white">
+                ABOUT US
+            </h1>
+            <h1
+                class="mb-4 mx-15  text-2xl font-extrabold tracking-tight leading-none text-gray-900 sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl lg:px-7 dark:text-white">
+                Build Better Web Experiences – Learn UI/UX, Frontend & Backend with
+                Us.
+            </h1>
+            <p
+                class=" text-sm px-10 font-normal text-black md:text-md lg:text-xl xl:text-2xl sm:px-16 lg:px-48 dark:text-gray-400">
+                Turn your creativity into a profitable skillset with practical lessons
+                and portfolio-ready work.
+            </p>
+        </div>
+    </section>
+
+    <!-- video player -->
+    <section
+        class="py-8 px-4 mx-auto max-w-full text-center flex justify-center lg:py-1 lg:mt-15 bg-white dark:bg-gray-900">
+        <div class="relative w-full max-w-7xl" style="padding-top: 56.25%;">
+            <iframe class="absolute top-0 left-0 w-full h-full border border-gray-200 rounded-lg dark:border-gray-700"
+                src="https://www.youtube.com/embed/MyihbsJxF9M" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+            </iframe>
+        </div>
+    </section>
+
+
+
+    <section class="bg-white dark:bg-gray-900">
+        <div class="py-8 px-4 mx-auto max-w-screen-full text-center lg:py-16">
+            <p class="mb-3 mt-10 text-lg font-normal text-black lg:text-2xl sm:px-16 lg:px-48 dark:text-gray-400">
+                100% Remote
+            </p>
+            <h1 class=" text-3xl font-bold  text-gray-900 px-10 md:text-4xl lg:text-6xl dark:text-white">
+                Meet our global, remote-first team
+            </h1>
+        </div>
+    </section>
+
+
+
+    <div class="flex justify-center items-center bg-white dark:bg-gray-900  ">
+        <div id="profile-container"
+            class="grid grid-cols-1 px-5 sm:px-20 md:px-30 lg:px-5 xl:px-20 2xl:px-30 md:grid-cols-2 lg:grid-cols-3 gap-16 w-full max-w-[90%] mx-auto">
+        </div>
+    </div>
+
+
+
+    <section class="bg-white dark:bg-gray-900">
+        <div class="py-8 px-4 mx-auto max-w-screen-full text-center lg:py-16">
+            <p class="mb-3 mt-10 text-lg font-normal text-black lg:text-2xl sm:px-16 lg:px-48 dark:text-gray-400">
+                Core Principle</p>
+            <h1 class=" text-3xl font-bold  text-gray-900 px-10 md:text-4xl lg:text-6xl dark:text-white">
+                The four CodeJago Beliefs
+            </h1>
+        </div>
+    </section>
+
+
+    <div class="flex flex-col px-15 bg-white dark:bg-gray-900 space-y-5 md:space-y-10 lg:space-y-15 w-full">
+
+        <div
+            class="flex flex-col md:flex-row items-center justify-center border-1 border-dotted text-black dark:text-white rounded-2xl w-full max-w-6xl mx-auto">
+            <!-- Bagian Laptop -->
+            <div class="relative flex items-center justify-center w-2/8 md:w-3/8 ">
+                <img src="/simpen/about-1.png" alt="Laptop" class="w-full h-auto rounded-md">
+            </div>
+            <!-- Bagian Teks -->
+            <div class="flex flex-col md:w-5/8 order-1 px-5 md:px-10 lg:px-15 xl:px-20  text-center ">
+                <h1 class="text-2xl sm:text-3xl md:text-4xl md:mb-4 lg:text-5xl  font-bold ">Web courses for all
+                </h1>
+                <p class="text-sm py-4 sm:text-md md:text-lg lg:text-xl text-black dark:text-gray-300">
+                    You don’t need to go to 4 years of expensive school to become an amazing web maker.
+                </p>
+            </div>
+        </div>
+        <div
+            class="flex flex-col md:flex-row items-center justify-center border-1 border-dotted text-black dark:text-white rounded-2xl w-full max-w-6xl mx-auto">
+            <!-- Bagian Laptop -->
+
+
+            <div class="relative flex items-center justify-center w-2/8 md:w-3/8 ">
+                <img src="/simpen/about-2.png" alt="Laptop" class="w-full h-auto rounded-md">
+            </div>
+            <!-- Bagian Teks -->
+            <div class="flex flex-col md:w-5/8 order-1 px-5 md:px-10 lg:px-15 xl:px-20  text-center ">
+                <h1 class="text-2xl sm:text-3xl md:text-4xl md:mb-4 lg:text-5xl  font-bold ">Strategy equals success
+                </h1>
+                <p class="text-sm py-4 sm:text-md md:text-lg lg:text-xl text-black dark:text-gray-300">
+                    Understanding business & strategy is essential for both helping your clients and running a
+                    profitable freelance business.
+                </p>
+            </div>
+        </div>
+        <div
+            class="flex flex-col md:flex-row items-center justify-center border-1 border-dotted text-black dark:text-white rounded-2xl w-full max-w-6xl mx-auto">
+            <!-- Bagian Laptop -->
+
+
+            <div class="relative flex items-center justify-center w-2/8 md:w-3/8 ">
+                <img src="/simpen/about-3.png" alt="Laptop" class="w-full h-auto rounded-md">
+            </div>
+            <!-- Bagian Teks -->
+            <div class="flex flex-col md:w-5/8 order-1 px-5 md:px-10 lg:px-15 xl:px-20  text-center ">
+                <h1 class="text-2xl sm:text-3xl md:text-4xl md:mb-4 lg:text-5xl  font-bold ">No geographic Limitations
+                </h1>
+                <p class="text-sm py-4 sm:text-md md:text-lg lg:text-xl text-black dark:text-gray-300">
+                    It’s possible to become a successful freelance web maker no matter where you live.
+                </p>
+            </div>
+        </div>
+
+        <div
+            class="flex flex-col md:flex-row items-center justify-center border-1 border-dotted text-black dark:text-white rounded-2xl w-full max-w-6xl mx-auto">
+            <!-- Bagian Laptop -->
+
+
+            <div class="relative flex items-center justify-center w-2/8 md:w-3/8 ">
+                <img src="/simpen/about-4.png" alt="Laptop" class="w-full h-auto rounded-md">
+            </div>
+            <!-- Bagian Teks -->
+            <div class="flex flex-col md:w-5/8 order-1 px-5 md:px-10 lg:px-15 xl:px-20  text-center ">
+                <h1 class="text-2xl sm:text-3xl md:text-4xl md:mb-4 lg:text-5xl  font-bold ">Stability with flexibility
+                </h1>
+                <p class="text-sm py-4 sm:text-md md:text-lg lg:text-xl text-black dark:text-gray-300">
+                    With the right strategies, freelancing can provide great balance for your family, work, and life.
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+
+    <section class="bg-white dark:bg-gray-900 py-50">
+        <div class=" flex flex-col py-8 px-4 mx-auto max-w-screen-xl text-center items-center lg:py-16">
+            <img src="/simpen/Logo.png" class="w-30 h-auto" alt="">
+            <h1
+                class="mb-4 text-xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
+                Join Us in Building the World’s Best IT Course Platform</h1>
+            <p class="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 lg:px-48 dark:text-gray-400">Here at
+                Flowbite
+                It takes world-class talent to build the leading online IT education platform. If you’re an expert in
+                your field
+                with a strong portfolio, a no-nonsense approach to tech, and knowledge you’re eager to share with the
+                world,
+                we’d love to meet you.</p>
+            <div class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0">
+                <a href="#"
+                    class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-[#7579FF] hover:bg-[#2e2f51] focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
+                    Get In Touch
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+
+    <div class="relative w-full h-[500px] md:h-[600px] bg-bottom bg-no-repeat bg-cover pb-32"
+        style="background-image: url('/simpen/Obout Me.png');">
+        <div
+            class="absolute inset-0 flex flex-col items-center justify-center text-white px-4 text-center transform -translate-y-10 md:-translate-y-20">
+
+            <img src="/simpen/CodeJago 2.png" alt="Logo CodeJago" class="w-24 h-24 md:w-40 md:h-40 -mt-4" />
+
+            <h2 class="text-2xl md:text-4xl font-bold mb-10">Still Have Question?</h2>
+
+            <button
+                class="bg-white text-black text-sm md:text-base px-6 py-2 rounded-full font-semibold shadow-md hover:bg-gray-100 transition duration-300 mb-10">
+                Contact Us
+            </button>
+
+            <div class="flex space-x-6 mt-2 mx-auto md:mx-auto">
+                <a href="https://instagram.com" target="_blank">
+                    <img src="/simpen/instagram.svg" alt="Instagram"
+                        class="w-6 h-6 md:w-8 md:h-8 hover:scale-110 transition-transform duration-200" />
+                </a>
+                <a href="https://facebook.com" target="_blank">
+                    <img src="/simpen/facebook.svg" alt="Facebook"
+                        class="w-6 h-6 md:w-8 md:h-8 hover:scale-110 transition-transform duration-200" />
+                </a>
+                <a href="https://linkedin.com" target="_blank">
+                    <img src="/simpen/linkedin.svg" alt="LinkedIn"
+                        class="w-6 h-6 md:w-8 md:h-8 hover:scale-110 transition-transform duration-200" />
+                </a>
+                <a href="https://twitter.com" target="_blank">
+                    <img src="/simpen/twitter.svg" alt="Twitter"
+                        class="w-6 h-6 md:w-8 md:h-8 hover:scale-110 transition-transform duration-200" />
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="w-full bg-white flex px-5 lg:px-20 py-4 items-end justify-between">
+            <img src="/simpen/CodeJago 2.png" class="w-30 lg:w-24 h-auto" alt="">
+            <h1 class="text-md lg:text-2xl mb-4">CodeJago © 2025</h1>
+        </div>
+    </footer>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+<script src="/src/profile-card.js"></script>
+<script src="/src/navbar.js"></script>
+
+
+</html>

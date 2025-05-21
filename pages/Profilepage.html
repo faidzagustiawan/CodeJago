@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Personal Information</title>
+  <link href="/src/output.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.0/css/all.min.css" />
+  <style>
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      width: 0%;
+      height: 3px;
+      left: 0;
+      bottom: -2px;
+      background-color: #7579FF;
+      border-radius: 4px;
+      transition: width 0.2s ease-in-out;
+    }
+
+    .nav-link:hover::after,
+    .nav-link.active::after {
+      width: 100%;
+    }
+
+    .hide-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    .hide-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+  </style>
+</head>
+
+<body class="bg-white font-sans">
+
+  <div id="navbar"></div>
+
+
+  <section class="min-h-screen bg-white flex flex-col items-center pt-24 pb-32">
+    <!-- Judul -->
+    <h2 class="text-4xl font-bold text-[#A259FF] mb-10">Personal Information</h2>
+
+    <div class="relative mb-6">
+      <div
+        class="w-36 h-36 rounded-full bg-gradient-to-tr from-purple-600 to-pink-600 flex items-center justify-center">
+        <img id="profilePicture" src="https://randomuser.me/api/portraits/men/75.jpg" alt="Profile"
+          class="w-32 h-32 rounded-full object-cover border-4 border-white shadow-lg" />
+      </div>
+    </div>
+
+    <!-- Tombol ganti/hapus foto -->
+    <div class="flex gap-4 mb-6">
+      <input type="file" id="changePicture" class="hidden" accept="image/*">
+      <button onclick="document.getElementById('changePicture').click();"
+        class="px-4 py-2 bg-[#1B1C37] text-white rounded-md hover:bg-[#D732A8] text-sm">
+        Change Picture
+      </button>
+      <button id="deletePicture"
+        class="px-4 py-2 bg-white border border-gray-300 rounded-md hover:bg-gray-100 transition text-sm">
+        Delete Picture
+      </button>
+    </div>
+    <!-- Form -->
+    <form class="w-full max-w-2xl bg-white border border-black rounded-xl shadow-md p-8 mb-20">
+      <div class="mb-4">
+        <label for="profileName" class="block text-gray-800 text-sm font-semibold mb-2">Profile Name</label>
+        <input type="text" id="profileName"
+          class="w-full px-4 py-3 border border-black rounded-md focus:ring-2 focus:ring-purple-400"
+          placeholder="Your name" />
+      </div>
+      <div class="mb-4">
+        <label for="email" class="block text-gray-800 text-sm font-semibold mb-2">E-mail</label>
+        <input type="email" id="email"
+          class="w-full px-4 py-3 border border-black rounded-md focus:ring-2 focus:ring-purple-400"
+          placeholder="Your email" />
+      </div>
+      <div class="mb-4">
+        <label for="phone" class="block text-gray-800 text-sm font-semibold mb-2">Phone</label>
+        <input type="tel" id="phone"
+          class="w-full px-4 py-3 border border-black rounded-md focus:ring-2 focus:ring-purple-400"
+          placeholder="Your phone" />
+      </div>
+      <div class="mb-4">
+        <label for="bio" class="block text-gray-800 text-sm font-semibold mb-2">Bio</label>
+        <textarea id="bio" class="w-full px-4 py-3 border border-black rounded-md focus:ring-2 focus:ring-purple-400"
+          placeholder="Tell us about yourself"></textarea>
+      </div>
+
+      <div class="flex justify-center">
+        <button type="submit"
+          class="px-6 py-2 bg-[#1B1C37] text-white rounded-md hover:bg-[#D732A8] transition font-medium">
+          Save Changes
+        </button>
+      </div>
+    </form>
+
+  </section>
+
+  <!-- Footer Section -->
+  <div class="relative w-full h-[500px] md:h-[600px] bg-no-repeat bg-cover bg-bottom"
+    style="background-image: url('/simpen/Obout Me.png');">
+    <div
+      class="absolute inset-0 flex flex-col items-center justify-center text-white px-4 text-center transform -translate-y-10 md:-translate-y-20">
+      <img src="/simpen/CodeJago 2.png" alt="Logo CodeJago" class="w-24 h-24 md:w-40 md:h-40 -mt-4" />
+      <h2 class="text-2xl md:text-4xl font-bold mb-8">Still Have Question?</h2>
+      <button
+        class="bg-white text-black text-sm md:text-base px-6 py-2 rounded-full font-semibold shadow-md hover:bg-gray-100 transition duration-300 mb-8">
+        Contact Us
+      </button>
+      <div class="flex space-x-6 mt-2">
+        <a href="https://instagram.com" target="_blank">
+          <img src="/simpen/instagram.svg" alt="Instagram"
+            class="w-6 h-6 md:w-8 md:h-8 hover:scale-110 transition-transform duration-200" />
+        </a>
+        <a href="https://facebook.com" target="_blank">
+          <img src="/simpen/facebook.svg" alt="Facebook"
+            class="w-6 h-6 md:w-8 md:h-8 hover:scale-110 transition-transform duration-200" />
+        </a>
+        <a href="https://linkedin.com" target="_blank">
+          <img src="/simpen/linkedin.svg" alt="LinkedIn"
+            class="w-6 h-6 md:w-8 md:h-8 hover:scale-110 transition-transform duration-200" />
+        </a>
+        <a href="https://twitter.com" target="_blank">
+          <img src="/simpen/twitter.svg" alt="Twitter"
+            class="w-6 h-6 md:w-8 md:h-8 hover:scale-110 transition-transform duration-200" />
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer Text -->
+  <footer>
+    <div class="w-full bg-white flex px-5 lg:px-20 py-4 items-end justify-between">
+      <img src="/simpen/CodeJago 2.png" class="w-20 lg:w-24 h-auto" alt="Logo Footer" />
+      <h1 class="text-md lg:text-2xl mb-4">CodeJago © 2025</h1>
+    </div>
+  </footer>
+
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+<script src="/src/profileData.js"></script>
+<script src="/src/navbar.js"></script>
+
+</html>

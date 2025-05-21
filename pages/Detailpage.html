@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coursepage</title>
+    <link href="/src/output.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.0/css/all.min.css">
+</head>
+<style>
+    .nav-link::after {
+        content: '';
+        position: absolute;
+        width: 0%;
+        height: 3px;
+        left: 0;
+        bottom: -2px;
+        background-color: #7579FF;
+        border-radius: 4px;
+        transition: width 0.2s ease-in-out;
+    }
+
+    .nav-link:hover::after,
+    .nav-link.active::after {
+        width: 100%;
+    }
+
+    /* Sembunyikan scrollbar */
+    .hide-scrollbar {
+        -ms-overflow-style: none;
+        /* IE dan Edge */
+        scrollbar-width: none;
+        /* Firefox */
+    }
+
+    .hide-scrollbar::-webkit-scrollbar {
+        display: none;
+        /* Chrome, Safari, Opera */
+    }
+</style>
+</head>
+
+<body class="bg-white">
+
+    <div id="navbar"></div>
+
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 md:pt-40 md:pb-28">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="flex flex-col md:flex-row md:items-center">
+                <!-- Text Content -->
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <div class="max-w-xl">
+                        <span
+                            class="inline-block px-4 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm font-medium mb-6">
+                            Webflow Masterclass
+                        </span>
+                        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-indigo-900 mb-6">
+                            Master Webflow Like Never Before
+                        </h1>
+                        <p class="text-lg md:text-xl text-gray-600 mb-8">
+                            Learn to create stunning, professional websites with Webflow. From basics to advanced
+                            techniques,
+                            transform your design skills and career.
+                        </p>
+                        <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4">
+                            <button id="scrollBtn"
+                                class="bg-indigo-600 hover:bg-indigo-700 text-white font-medium cursor-pointer py-3 px-6 rounded-md text-center transition-colors duration-200">
+                                Enroll Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Image Section -->
+                <div class="md:w-1/2 relative">
+                    <div class="bg-white rounded-lg shadow-xl overflow-hidden">
+                        <img src="https://images.pexels.com/photos/5926389/pexels-photo-5926389.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                            alt="Webflow Masterclass Preview" class="w-full h-auto object-cover" />
+                        <div class="absolute inset-0 bg-gradient-to-tr from-indigo-900/30 to-purple-600/20 rounded-lg">
+                        </div>
+                    </div>
+                    <div class="absolute -bottom-6 -right-6 bg-white rounded-lg shadow-lg p-4">
+                        <div class="flex items-center">
+                            <div class="flex -space-x-2">
+                                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Student 1"
+                                    class="w-10 h-10 rounded-full border-2 border-white object-cover" />
+                                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Student 2"
+                                    class="w-10 h-10 rounded-full border-2 border-white object-cover" />
+                                <img src="https://randomuser.me/api/portraits/women/22.jpg" alt="Student 3"
+                                    class="w-10 h-10 rounded-full border-2 border-white object-cover" />
+                            </div>
+                            <div class="ml-4">
+                                <p class="text-xs text-gray-500">Joined by</p>
+                                <p class="text-sm font-medium text-indigo-900">2,500+ students</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Trusted by Section -->
+            <div class="mt-20 pt-10 border-t border-gray-200 text-center">
+                <p class="text-gray-500 mb-8">Trusted by designers at</p>
+                <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16">
+                    <span class="text-gray-400 font-medium text-lg">Google</span>
+                    <span class="text-gray-400 font-medium text-lg">Microsoft</span>
+                    <span class="text-gray-400 font-medium text-lg">Figma</span>
+                    <span class="text-gray-400 font-medium text-lg">Dribbble</span>
+                    <span class="text-gray-400 font-medium text-lg">Airbnb</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-20 bg-white" id="features">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-indigo-900 mb-4">
+                    What You'll Learn in This Course
+                </h2>
+                <p class="text-lg text-gray-600">
+                    From fundamentals to advanced techniques, unlock the full potential of Webflow
+                    and transform your design workflow forever.
+                </p>
+            </div>
+
+            <!-- Features Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div
+                    class="bg-white p-8 rounded-lg border border-gray-100 shadow-sm hover:shadow-2xl transition-shadow duration-300">
+                    <div class="rounded-full bg-indigo-50 p-3 inline-block mb-4 text-center text-2xl">💻</div>
+                    <h3 class="text-xl font-bold text-indigo-900 mb-3">Master Webflow Development</h3>
+                    <p class="text-gray-600">Learn how to build complex websites without writing a single line of code.
+                    </p>
+                </div>
+
+                <div
+                    class="bg-white p-8 rounded-lg border border-gray-100 shadow-sm hover:shadow-2xl transition-shadow duration-300">
+                    <div class="rounded-full bg-indigo-50 p-3 inline-block mb-4 text-center text-2xl">✏️</div>
+                    <h3 class="text-xl font-bold text-indigo-900 mb-3">Design to Development</h3>
+                    <p class="text-gray-600">Transform your designs into fully functional websites faster than ever
+                        before.</p>
+                </div>
+
+                <div
+                    class="bg-white p-8 rounded-lg border border-gray-100 shadow-sm hover:shadow-2xl transition-shadow duration-300">
+                    <div class="rounded-full bg-indigo-50 p-3 inline-block mb-4 text-center text-2xl">🚀</div>
+                    <h3 class="text-xl font-bold text-indigo-900 mb-3">Launch Client Projects</h3>
+                    <p class="text-gray-600">Get clients up and running with scalable, maintainable Webflow sites.</p>
+                </div>
+
+                <div
+                    class="bg-white p-8 rounded-lg border border-gray-100 shadow-sm hover:shadow-2xl transition-shadow duration-300">
+                    <div class="rounded-full bg-indigo-50 p-3 inline-block mb-4 text-center text-2xl">⏳</div>
+                    <h3 class="text-xl font-bold text-indigo-900 mb-3">Work Faster</h3>
+                    <p class="text-gray-600">Cut your development time in half with our proven Webflow workflows.</p>
+                </div>
+
+                <div
+                    class="bg-white p-8 rounded-lg border border-gray-100 shadow-sm hover:shadow-2xl transition-shadow duration-300">
+                    <div class="rounded-full bg-indigo-50 p-3 inline-block mb-4 text-center text-2xl">👥</div>
+                    <h3 class="text-xl font-bold text-indigo-900 mb-3">Join a Community</h3>
+                    <p class="text-gray-600">Connect with fellow designers and developers in our private community.</p>
+                </div>
+
+                <div
+                    class="bg-white p-8 rounded-lg border border-gray-100 shadow-sm hover:shadow-2xl transition-shadow duration-300">
+                    <div class="rounded-full bg-indigo-50 p-3 inline-block mb-4 text-center text-2xl">👁️</div>
+                    <h3 class="text-xl font-bold text-indigo-900 mb-3">Build a Portfolio</h3>
+                    <p class="text-gray-600">Create impressive projects to showcase your new Webflow skills.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Curriculum Section -->
+    <section class="py-20 bg-gray-50" id="curriculum">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-indigo-900 mb-4">
+                    Course Curriculum
+                </h2>
+                <p class="text-lg text-gray-600">
+                    A comprehensive curriculum designed to take you from beginner to Webflow professional
+                    in just 6 weeks.
+                </p>
+            </div>
+
+            <!-- Modules List -->
+            <div class="max-w-4xl mx-auto" id="modules-container">
+                <!-- Modules will be inserted here dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Instructor Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="flex flex-col md:flex-row items-center md:items-start gap-12">
+
+                <!-- Instructor Image -->
+                <div class="md:w-1/3">
+                    <div class="relative">
+                        <div
+                            class="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white shadow-xl">
+                            <img src="https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                                alt="Instructor" class="w-full h-full object-cover">
+                        </div>
+                        <div
+                            class="absolute -bottom-2 -right-2 bg-indigo-600 text-white px-4 py-2 rounded-full text-sm font-medium">
+                            Lead Instructor
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Instructor Info -->
+                <div class="md:w-2/3 text-center md:text-left">
+                    <h2 class="text-3xl md:text-4xl font-bold text-indigo-900 mb-4">
+                        Meet Your Instructor
+                    </h2>
+                    <h3 class="text-xl font-semibold text-indigo-700 mb-6">Alex Morgan, Webflow Expert & Design Educator
+                    </h3>
+
+                    <div class="mb-6">
+                        <p class="text-gray-600 mb-4">
+                            With over 10 years of experience in web design and development, Alex has helped hundreds of
+                            businesses transform their online presence using Webflow. As a certified Webflow Expert and
+                            former design lead at leading tech companies, Alex brings real-world expertise to this
+                            comprehensive course.
+                        </p>
+                        <p class="text-gray-600">
+                            Alex has built websites for Fortune 500 companies and startups alike, and now shares this
+                            knowledge through Flux Academy's Webflow Masterclass, which has helped over 2,500 designers
+                            advance their careers and create stunning, functional websites.
+                        </p>
+                    </div>
+
+                    <!-- Instructor Highlights -->
+                    <div class="flex flex-wrap justify-center md:justify-start gap-3 mb-8">
+                        <span class="bg-indigo-100 text-indigo-700 px-3 py-1 rounded-full text-sm">Certified Webflow
+                            Expert</span>
+                        <span class="bg-indigo-100 text-indigo-700 px-3 py-1 rounded-full text-sm">10+ Years
+                            Experience</span>
+                        <span class="bg-indigo-100 text-indigo-700 px-3 py-1 rounded-full text-sm">500+ Websites
+                            Built</span>
+                        <span class="bg-indigo-100 text-indigo-700 px-3 py-1 rounded-full text-sm">Award-Winning
+                            Designer</span>
+                    </div>
+
+                    <!-- Social Links -->
+                    <div class="flex flex-wrap justify-center md:justify-start gap-4">
+                        <a href="#"
+                            class="flex items-center text-indigo-600 hover:text-indigo-800 transition-colors duration-200">
+                            <i class="fa-brands fa-linkedin-in text-xl mr-2"></i> LinkedIn
+                        </a>
+                        <a href="#"
+                            class="flex items-center text-indigo-600 hover:text-indigo-800 transition-colors duration-200">
+                            <i class="fa-brands fa-twitter text-xl mr-2"></i> Twitter
+                        </a>
+                        <a href="#"
+                            class="flex items-center text-indigo-600 hover:text-indigo-800 transition-colors duration-200">
+                            <i class="fa-solid fa-external-link text-xl mr-2"></i> Portfolio
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="bg-white py-16 px-6 text-center">
+        <h2 class="text-4xl font-extrabold text-purple-400 mb-12">What Our Student Say</h2>
+
+        <div id="testimonial-wrapper" class="mx-auto max-w-[80rem] overflow-x-auto hide-scrollbar scroll-smooth ">
+            <div id="card-container" class="flex gap-10 w-max px-4">
+
+                <!-- Card 1 -->
+                <div class="flex-shrink-0 w-[30rem] h-96 bg-gray-50 rounded-3xl shadow p-8 flex items-center gap-8">
+                    <img src="/simpen/image.png" class="w-48 h-64 object-cover rounded-2xl" />
+                    <div class="text-left">
+                        <h3 class="text-2xl font-semibold text-purple-300">Card 1</h3>
+                        <p class="mt-4 text-gray-600">Kalimat testimoni pertama yang sangat menginspirasi dan menggugah
+                            hati.</p>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="flex-shrink-0 w-[30rem] h-96 bg-gray-50 rounded-3xl shadow p-8 flex items-center gap-8">
+                    <img src="/simpen/image.png" class="w-48 h-64 object-cover rounded-2xl" />
+                    <div class="text-left">
+                        <h3 class="text-2xl font-semibold text-purple-300">Card 2</h3>
+                        <p class="mt-4 text-gray-600">Testimoni kedua memberikan kesan positif dan kepercayaan tinggi
+                            terhadap
+                            layanan kami.</p>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="flex-shrink-0 w-[30rem] h-96 bg-gray-50 rounded-3xl shadow p-8 flex items-center gap-8">
+                    <img src="/simpen/image.png" class="w-48 h-64 object-cover rounded-2xl" />
+                    <div class="text-left">
+                        <h3 class="text-2xl font-semibold text-purple-300">Card 3</h3>
+                        <p class="mt-4 text-gray-600">Pengalaman luar biasa yang membuat pelanggan kami sangat puas dan
+                            loyal.</p>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="flex-shrink-0 w-[30rem] h-96 bg-gray-50 rounded-3xl shadow p-8 flex items-center gap-8">
+                    <img src="/simpen/image.png" class="w-48 h-64 object-cover rounded-2xl" />
+                    <div class="text-left">
+                        <h3 class="text-2xl font-semibold text-purple-300">Card 4</h3>
+                        <p class="mt-4 text-gray-600">Testimoni keempat ini menegaskan kualitas dan profesionalitas
+                            kami.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Pricing Section -->
+    <section id="Pricing"  class="py-20 bg-gray-50" id="pricing">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-indigo-900 mb-4">
+                    Choose Your Plan
+                </h2>
+                <p class="text-lg text-gray-600 mb-8">
+                    Invest in your skills and future with our comprehensive Webflow courses.
+                </p>
+
+                <!-- Plan Type Toggle -->
+                <div class="inline-flex items-center p-1 bg-gray-100 rounded-lg">
+                    <button id="monthlyBtn"
+                        class="px-4 py-2 rounded-md text-sm font-medium transition-all duration-200 bg-white shadow-sm text-indigo-900">
+                        Pay Monthly
+                    </button>
+                    <button id="annualBtn"
+                        class="px-4 py-2 rounded-md text-sm font-medium transition-all duration-200 text-gray-500 hover:text-gray-700">
+                        Pay Annually
+                        <span class="ml-1 bg-green-100 text-green-700 text-xs px-2 py-0.5 rounded-full">
+                            Save 20%
+                        </span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Pricing Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Essential Plan -->
+                <div
+                    class="bg-white rounded-xl overflow-hidden border transition-all duration-300 border-gray-200 hover:border-indigo-200 hover:shadow-md">
+                    <div class="p-6 md:p-8">
+                        <h3 class="text-xl font-bold text-indigo-900 mb-2">Essentials</h3>
+                        <p class="text-gray-600 mb-4">Perfect for beginners looking to learn Webflow basics.</p>
+
+                        <div class="mb-6">
+                            <span class="text-4xl font-bold text-indigo-900" id="essentialsPrice">$399</span>
+                            <span class="text-gray-500 ml-1 " id="essentialTime">/year</span>
+                        </div>
+
+                        <a href="#"
+                            class="block w-full py-3 px-4 rounded-lg text-center font-medium transition-colors duration-200 bg-indigo-100 hover:bg-indigo-200 text-indigo-700">
+                            Get Started
+                        </a>
+
+                        <ul class="space-y-3 mt-4">
+                            <li class="flex items-start"><i class="fa-solid fa-check-circle text-green-500 mr-2"></i>
+                                Webflow Fundamentals Course</li>
+                            <li class="flex items-start"><i class="fa-solid fa-check-circle text-green-500 mr-2"></i>
+                                Responsive Design Modules</li>
+                            <li class="flex items-start"><i class="fa-solid fa-check-circle text-green-500 mr-2"></i> 6
+                                Months Access</li>
+                            <li class="flex items-start"><i class="fa-solid fa-times-circle text-gray-400 mr-2"></i>
+                                Advanced Techniques</li>
+                            <li class="flex items-start"><i class="fa-solid fa-times-circle text-gray-400 mr-2"></i>
+                                1-on-1 Coaching Sessions</li>
+                            <li class="flex items-start"><i class="fa-solid fa-times-circle text-gray-400 mr-2"></i>
+                                Client Project Walkthroughs</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Professional Plan -->
+                <div
+                    class="bg-white rounded-xl overflow-hidden border transition-all duration-300 border-indigo-500 shadow-lg scale-105 md:scale-110 z-10">
+                    <div class="bg-indigo-600 py-2 text-center text-white text-sm font-medium">Most Popular</div>
+                    <div class="p-6 md:p-8">
+                        <h3 class="text-xl font-bold text-indigo-900 mb-2">Professional</h3>
+                        <p class="text-gray-600 mb-4">Our most popular plan for serious designers.</p>
+
+                        <div class="mb-6">
+                            <span class="text-4xl font-bold text-indigo-900" id="professionalPrice">$649</span>
+                            <span class="text-gray-500 ml-1" id="professionalTime">/year</span>
+                        </div>
+
+                        <a href="Checkoutpage.html"
+                            class="block w-full py-3 px-4 rounded-lg text-center font-medium transition-colors duration-200 bg-indigo-600 hover:bg-indigo-700 text-white">
+                            Enroll Now
+                        </a>
+
+
+                        <ul class="space-y-3 mt-4">
+                            <li><i class="fa-solid fa-check-circle text-green-500 mr-2"></i> Everything in Essentials
+                            </li>
+                            <li><i class="fa-solid fa-check-circle text-green-500 mr-2"></i> Advanced Techniques Modules
+                            </li>
+                            <li><i class="fa-solid fa-check-circle text-green-500 mr-2"></i> CMS & Dynamic Content</li>
+                            <li><i class="fa-solid fa-check-circle text-green-500 mr-2"></i> Interactions & Animations
+                            </li>
+                            <li><i class="fa-solid fa-check-circle text-green-500 mr-2"></i> Lifetime Access</li>
+                            <li><i class="fa-solid fa-check-circle text-green-500 mr-2"></i> Project Review Sessions
+                            </li>
+                            <li class="flex items-start"><i class="fa-solid fa-times-circle text-gray-400 mr-2"></i>
+                                Client Project Walkthroughs</li>
+                            <li class="flex items-start"><i class="fa-solid fa-times-circle text-gray-400 mr-2"></i>
+                                1-on-1 Coaching Sessions</li>
+                        </ul>
+
+                    </div>
+                </div>
+                <!-- Master Plan -->
+                <div
+                    class="bg-white rounded-xl overflow-hidden border transition-all duration-300 border-gray-200 hover:border-indigo-200 hover:shadow-md">
+                    <div class="p-6 md:p-8">
+                        <h3 class="text-xl font-bold text-indigo-900 mb-2">Master</h3>
+                        <p class="text-gray-600 mb-4">For designers ready to master Webflow completely.</p>
+
+                        <div class="mb-6">
+                            <span class="text-4xl font-bold text-indigo-900" id="masterPrice">$999</span>
+                            <span class="text-gray-500 ml-1" id="masterPricingTime">/year</span>
+                        </div>
+
+                        <a href="#"
+                            class="block w-full py-3 px-4 rounded-lg text-center font-medium transition-colors duration-200 bg-indigo-100 hover:bg-indigo-200 text-indigo-700">
+                            Become a Master
+                        </a>
+
+                        <ul class="space-y-3 mt-4">
+                            <li class="flex items-start"><i class="fa-solid fa-check-circle text-green-500 mr-2"></i>
+                                Everything in Professional</li>
+                            <li class="flex items-start"><i class="fa-solid fa-check-circle text-green-500 mr-2"></i>
+                                Client Project Walkthroughs</li>
+                            <li class="flex items-start"><i class="fa-solid fa-check-circle text-green-500 mr-2"></i> 4
+                                Personal 1-on-1 Coaching Sessions</li>
+                            <li class="flex items-start"><i class="fa-solid fa-check-circle text-green-500 mr-2"></i>
+                                Advanced E-commerce Techniques</li>
+                            <li class="flex items-start"><i class="fa-solid fa-check-circle text-green-500 mr-2"></i>
+                                Membership Site Training</li>
+                            <li class="flex items-start"><i class="fa-solid fa-check-circle text-green-500 mr-2"></i>
+                                White Label & Client Handoff</li>
+                            <li class="flex items-start"><i class="fa-solid fa-check-circle text-green-500 mr-2"></i>
+                                Lifetime Updates</li>
+                            <li class="flex items-start"><i class="fa-solid fa-check-circle text-green-500 mr-2"></i>
+                                Priority Support</li>
+                            <li class="flex items-start"><i class="fa-solid fa-check-circle text-green-500 mr-2"></i>
+                                Exclusive Webflow Community Access</li>
+                            <li class="flex items-start"><i class="fa-solid fa-check-circle text-green-500 mr-2"></i>
+                                VIP Webflow Partnership Benefits</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Help & Money-Back Guarantee -->
+            <div class="mt-12 text-center">
+                <p class="text-gray-500 mb-4">
+                    Not sure which plan is right for you?
+                    <a href="#" class="text-indigo-600 font-medium hover:underline">Contact us</a> for help.
+                </p>
+                <p class="text-sm text-gray-400">
+                    30-day money-back guarantee. No questions asked.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- FAQ Section -->
+    <section class="py-20 bg-white" id="faq">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-indigo-900 mb-4">
+                    Frequently Asked Questions
+                </h2>
+                <p class="text-lg text-gray-600">
+                    Got questions? We've got answers. If you don't see your question here,
+                    feel free to reach out to our team.
+                </p>
+            </div>
+
+            <!-- FAQ List -->
+            <div class="max-w-3xl mx-auto" id="faq-container">
+                <!-- FAQ items will be added dynamically via JavaScript -->
+            </div>
+
+            <!-- Contact Support -->
+            <div class="text-center mt-12 pt-12 border-t border-gray-200">
+                <h3 class="text-xl font-bold text-indigo-900 mb-4">
+                    Still have questions?
+                </h3>
+                <p class="text-gray-600 mb-6">
+                    Contact our friendly support team and we'll get back to you as soon as possible.
+                </p>
+                <a href="#"
+                    class="inline-block bg-indigo-100 hover:bg-indigo-200 text-indigo-700 font-medium py-3 px-6 rounded-lg transition-colors duration-200">
+                    Contact Support
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- Wave Background Section -->
+    <div class="relative w-full h-[500px] md:h-[600px] bg-bottom bg-no-repeat bg-cover pb-32"
+        style="background-image: url('/simpen/Obout Me.png');">
+        <div
+            class="absolute inset-0 flex flex-col items-center justify-center text-white px-4 text-center transform -translate-y-10 md:-translate-y-20">
+
+            <img src="/simpen/CodeJago 2.png" alt="Logo CodeJago" class="w-24 h-24 md:w-40 md:h-40 -mt-4" />
+
+            <h2 class="text-2xl md:text-4xl font-bold mb-10">Still Have Question?</h2>
+
+            <button
+                class="bg-white text-black text-sm md:text-base px-6 py-2 rounded-full font-semibold shadow-md hover:bg-gray-100 transition duration-300 mb-10">
+                Contact Us
+            </button>
+
+            <div class="flex space-x-6 mt-2 mx-auto md:mx-auto">
+                <a href="https://instagram.com" target="_blank">
+                    <img src="/simpen/instagram.svg" alt="Instagram"
+                        class="w-6 h-6 md:w-8 md:h-8 hover:scale-110 transition-transform duration-200" />
+                </a>
+                <a href="https://facebook.com" target="_blank">
+                    <img src="/simpen/facebook.svg" alt="Facebook"
+                        class="w-6 h-6 md:w-8 md:h-8 hover:scale-110 transition-transform duration-200" />
+                </a>
+                <a href="https://linkedin.com" target="_blank">
+                    <img src="/simpen/linkedin.svg" alt="LinkedIn"
+                        class="w-6 h-6 md:w-8 md:h-8 hover:scale-110 transition-transform duration-200" />
+                </a>
+                <a href="https://twitter.com" target="_blank">
+                    <img src="/simpen/twitter.svg" alt="Twitter"
+                        class="w-6 h-6 md:w-8 md:h-8 hover:scale-110 transition-transform duration-200" />
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="w-full bg-white flex px-5 lg:px-20 py-4 items-end justify-between">
+            <img src="/simpen/CodeJago 2.png" class="w-30 lg:w-24 h-auto" alt="">
+            <h1 class="text-md lg:text-2xl mb-4">CodeJago © 2025</h1>
+        </div>
+    </footer>
+
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+<script>
+    const toggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('mobile-menu');
+
+    toggle.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+    });
+</script>
+<script>
+    window.addEventListener('load', () => {
+        const wrapper = document.getElementById('testimonial-wrapper');
+        const cards = wrapper.querySelectorAll('.flex-shrink-0');
+        if (cards.length >= 2) {
+            const card = cards[1]; // card ke-2
+            const cardWidth = card.offsetWidth;
+            const wrapperWidth = wrapper.clientWidth;
+            const cardOffset = card.offsetLeft;
+
+            const scrollTo = cardOffset - (wrapperWidth / 2) + (cardWidth / 2) - 80; // koreksi posisi
+            wrapper.scrollLeft = scrollTo;
+        }
+    });
+</script>
+<script src="/src/navbar.js"></script>
+<script>
+    document.getElementById("scrollBtn").addEventListener("click", function () {
+        document.getElementById("Pricing").scrollIntoView({ behavior: "smooth" });
+    });
+    document.addEventListener("DOMContentLoaded", function () {
+        const monthlyBtn = document.getElementById("monthlyBtn");
+        const annualBtn = document.getElementById("annualBtn");
+        const essentialsPrice = document.getElementById("essentialsPrice");
+        const professionalPrice = document.getElementById("professionalPrice");
+        const professionalTime = document.getElementById("professionalTime");
+        const essentialTime = document.getElementById("essentialTime");
+        const masterPrice = document.getElementById("masterPrice");
+        const masterPricingTime = document.getElementById("masterPricingTime");
+
+
+
+
+
+
+        monthlyBtn.addEventListener("click", function () {
+            essentialsPrice.textContent = "$500";
+            professionalPrice.textContent = "$600";
+            masterPrice.textContent = "$999";
+            professionalTime.textContent = "/month";
+            essentialTime.textContent = "/month";
+            masterPricingTime.textContent = "/month";
+            annualBtn.classList.remove("bg-white", "shadow-sm", "text-indigo-900");
+            monthlyBtn.classList.add("bg-white", "shadow-sm", "text-indigo-900");
+        });
+
+        annualBtn.addEventListener("click", function () {
+            essentialsPrice.textContent = "$4800";
+            professionalPrice.textContent = "$5760";
+            masterPrice.textContent = "$9590";
+            monthlyBtn.classList.remove("bg-white", "shadow-sm", "text-indigo-900");
+            annualBtn.classList.add("bg-white", "shadow-sm", "text-indigo-900");
+        });
+    });
+
+
+    document.addEventListener("DOMContentLoaded", function () {
+        const faqItems = [
+            {
+                question: "Do I need prior Webflow experience?",
+                answer: "No, our course is designed for all skill levels. We start with the fundamentals and gradually move to more advanced topics, making it perfect for beginners while still valuable for those with some Webflow experience."
+            },
+            {
+                question: "How long do I have access to the course?",
+                answer: "Access depends on your chosen plan. The Essentials plan includes 6 months of access, while both Professional and Master plans include lifetime access to the course materials and updates."
+            },
+            {
+                question: "Are there any prerequisites for taking this course?",
+                answer: "Basic computer literacy and some familiarity with web design concepts are helpful, but not required. A desire to learn and willingness to practice are the most important prerequisites. We recommend having at least some design experience (e.g., with tools like Figma or Sketch)."
+            },
+            {
+                question: "Can I upgrade my plan later?",
+                answer: "Yes, you can upgrade your plan at any time. You'll simply pay the difference between your current plan and the new plan. Contact our support team for assistance with upgrading."
+            },
+            {
+                question: "Do you offer a refund if I'm not satisfied?",
+                answer: "Yes, we offer a 30-day money-back guarantee. If you're not completely satisfied with the course, simply contact us within 30 days of purchase for a full refund."
+            }
+        ];
+
+        const faqContainer = document.getElementById("faq-container");
+
+        faqItems.forEach((item, index) => {
+            const faqDiv = document.createElement("div");
+            faqDiv.className = "border-b border-gray-200 last:border-b-0";
+
+            faqDiv.innerHTML = `
+            <button class="w-full py-6 flex items-center justify-between focus:outline-none text-left" onclick="toggleFAQ(${index})">
+                <h3 class="text-lg font-medium text-indigo-900">${item.question}</h3>
+                <i class="fa-solid fa-chevron-down text-gray-400 ml-4" id="faq-icon-${index}"></i>
+            </button>
+            <div class="overflow-hidden transition-all duration-300 max-h-0" id="faq-answer-${index}">
+                <p class="text-gray-600 pb-6">${item.answer}</p>
+            </div>
+        `;
+
+            faqContainer.appendChild(faqDiv);
+        });
+    });
+
+    function toggleFAQ(index) {
+        const answerDiv = document.getElementById(`faq-answer-${index}`);
+        const icon = document.getElementById(`faq-icon-${index}`);
+
+        if (answerDiv.classList.contains("max-h-0")) {
+            answerDiv.classList.remove("max-h-0");
+            answerDiv.classList.add("max-h-96");
+            icon.classList.replace("fa-chevron-down", "fa-chevron-up");
+        } else {
+            answerDiv.classList.remove("max-h-96");
+            answerDiv.classList.add("max-h-0");
+            icon.classList.replace("fa-chevron-up", "fa-chevron-down");
+        }
+    }
+</script>
+<script src="/src/curriculum.js"></script>
+
+</html>
